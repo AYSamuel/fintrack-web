@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — FinTrack</title>
+  <meta name="description" content="FinTrack Privacy Policy — how we handle your data (spoiler: we don't collect any)." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #2563eb;
+      --purple: #7c3aed;
+      --blue-light: #eff6ff;
+      --blue-mid: #bfdbfe;
+      --text-dark: #1a1a2e;
+      --text-body: #374151;
+      --text-muted: #6b7280;
+      --bg: #f8f9fb;
+      --white: #ffffff;
+      --radius: 16px;
+      --shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0 24px;
+    }
+
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-body);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a.active { color: var(--blue); font-weight: 700; }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.5px; }
+    header p  { margin-top: 8px; opacity: 0.85; font-size: 0.95rem; }
+
+    /* ── CONTENT ── */
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      border: 1px solid var(--blue-mid);
+      border-radius: 999px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .policy-section {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid #f0f0f5;
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    p, li { font-size: 0.95rem; color: var(--text-body); }
+    ul { padding-left: 20px; margin-top: 8px; }
+    li { margin-bottom: 6px; }
+    strong { color: #111827; }
+
+    .highlight {
+      background: var(--blue-light);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #1e40af;
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text-dark);
+      color: #9ca3af;
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .footer-logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: #fff; }
+    footer p { font-size: 0.82rem; }
+
+    @media (max-width: 480px) {
+      .policy-section { padding: 20px 18px; }
+      header h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">FinTrack</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="privacy-policy.html" class="active">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>FinTrack — Personal Finance, Completely Private</p>
+  </header>
+
+  <div class="container">
+
+    <div class="badge">Effective: February 8, 2026 &nbsp;·&nbsp; Last Updated: April 18, 2026</div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#eff6ff;">🔒</span> Our Core Privacy Principle</h2>
+      <div class="highlight">
+        FinTrack is a local-first, privacy-first application. All your financial data stays on your device. We operate no servers, collect no personal information, and transmit nothing.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#fef2f2;">🚫</span> Data We Do NOT Collect</h2>
+      <p>We do not collect, store, or transmit:</p>
+      <ul>
+        <li>Your name, email address, or any personal identifiers</li>
+        <li>Your financial transactions, budgets, or savings goals</li>
+        <li>Your location or device identifiers</li>
+        <li>Usage analytics or behavioural data</li>
+        <li>Crash reports or diagnostic data</li>
+        <li>Any data via third-party analytics (Firebase, Amplitude, Mixpanel, etc.)</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#f0fdf4;">📱</span> Data Stored on Your Device</h2>
+      <p>All App data lives locally on your device:</p>
+      <ul>
+        <li><strong>Financial data</strong> (transactions, budgets, savings goals, categories) — on-device encrypted database</li>
+        <li><strong>App preferences</strong> (theme, currency, notifications) — device local storage</li>
+        <li><strong>Security credentials</strong> (PIN hash) — device secure storage (Keychain / EncryptedSharedPreferences)</li>
+      </ul>
+      <p style="margin-top:12px;">This data never leaves your device unless you explicitly use the Backup &amp; Export feature.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#faf5ff;">🛡️</span> Encryption &amp; Security</h2>
+      <ul>
+        <li>Financial database encrypted with <strong>AES-256</strong></li>
+        <li>PIN stored as a <strong>cryptographic hash</strong> — never plain text</li>
+        <li>Biometric authentication handled entirely by your device OS — never accessible to the App</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#fff7ed;">🔗</span> Third-Party Services</h2>
+      <p>FinTrack does not integrate any third-party analytics, advertising, or data-sharing services. The App has no network permissions and makes no outbound connections.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#eff6ff;">👤</span> Your Rights &amp; Data Control</h2>
+      <p>Because all data is stored locally, you have complete control:</p>
+      <ul>
+        <li><strong>Delete all data:</strong> Use "Clear Data" in Settings, or uninstall the App</li>
+        <li><strong>Export your data:</strong> Use the Backup &amp; Export feature in Settings</li>
+        <li><strong>No account to delete:</strong> There are no server-side profiles associated with your use</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#f0fdf4;">👶</span> Children's Privacy</h2>
+      <p>FinTrack does not knowingly collect information from children under 13. The App contains no features that target or collect data from minors.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#fff7ed;">📋</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The "Last Updated" date at the top reflects any revisions. Continued use of the App after changes are posted constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="icon" style="background:#eff6ff;">✉️</span> Contact Us</h2>
+      <p>Questions about this Privacy Policy? Reach us at:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@fintrack.app" style="color:var(--blue);">support@fintrack.app</a></li>
+        <li><strong>Website:</strong> <a href="https://fintrack-app.vercel.app" style="color:var(--blue);">fintrack-app.vercel.app</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">FinTrack</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:support@fintrack.app">Contact</a>
+    </div>
+    <p>© 2026 FinTrack. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

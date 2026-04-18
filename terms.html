@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — FinTrack</title>
+  <meta name="description" content="FinTrack Terms of Service — the rules for using the FinTrack mobile application." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #2563eb;
+      --purple: #7c3aed;
+      --blue-light: #eff6ff;
+      --blue-mid: #bfdbfe;
+      --text-dark: #1a1a2e;
+      --text-body: #374151;
+      --text-muted: #6b7280;
+      --bg: #f8f9fb;
+      --white: #ffffff;
+      --radius: 16px;
+      --shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0 24px;
+    }
+
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-body);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a.active { color: var(--blue); font-weight: 700; }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -0.5px; }
+    header p  { margin-top: 8px; opacity: 0.85; font-size: 0.95rem; }
+
+    /* ── CONTENT ── */
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      border: 1px solid var(--blue-mid);
+      border-radius: 999px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .terms-section {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid #f0f0f5;
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    p, li { font-size: 0.95rem; color: var(--text-body); }
+    p + p { margin-top: 10px; }
+    ul { padding-left: 20px; margin-top: 8px; }
+    li { margin-bottom: 6px; }
+    strong { color: #111827; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text-dark);
+      color: #9ca3af;
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .footer-logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: #fff; }
+    footer p { font-size: 0.82rem; }
+
+    @media (max-width: 480px) {
+      .terms-section { padding: 20px 18px; }
+      header h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">FinTrack</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html" class="active">Terms</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Terms of Service</h1>
+    <p>FinTrack — Please read these terms carefully before using the App</p>
+  </header>
+
+  <div class="container">
+
+    <div class="badge">Effective Date: February 8, 2026</div>
+
+    <div class="terms-section">
+      <h2><span class="icon" style="background:#eff6ff;">📄</span> 1. Acceptance of Terms</h2>
+      <p>By accessing or using the FinTrack mobile application (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these Terms, you may not access or use the App.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2><span class="icon" style="background:#f0fdf4;">📱</span> 2. Use License</h2>
+      <p>Permission is granted to download and use the App for personal, non-commercial purposes only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+      <ul>
+        <li>Modify or copy the App's source materials</li>
+        <li>Use the App for any commercial purpose or for any public display</li>
+        <li>Attempt to decompile or reverse engineer any software contained in the App</li>
+        <li>Remove any copyright or other proprietary notations</li>
+        <li>Transfer the App to another person or "mirror" it on any other server</li>
+      </ul>
+    </div>
+
+    <div class="terms-section">
+      <h2><span class="icon" style="background:#faf5ff;">🔐</span> 3. User Data &amp; Privacy</h2>
+      <p>FinTrack is designed to be a local-first application. All data you enter is stored exclusively on your device and encrypted using AES-256 encryption. We do not collect, store, or transmit your personal or financial data.</p>
+      <p>You are solely responsible for maintaining the security of your device and the data stored upon it. We are not responsible for any data loss or unauthorized access resulting from your failure to secure your device.</p>
+      <p>For full details on how we handle data, please review our <a href="privacy-policy.html" style="color:var(--blue);">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2><span class="icon" style="background:#fff7ed;">⚠️</span> 4. Disclaimer</h2>
+      <p>The App is provided on an "AS IS" and "AS AVAILABLE" basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation:</p>
+      <ul>
+        <li>Implied warranties of merchantability or fitness for a particular purpose</li>
+        <li>Non-infringement of intellectual property or other rights</li>
+        <li>Accuracy, reliability, or completeness of any information provided</li>
+      </ul>
+      <p>FinTrack is a personal finance tracking tool only and does not constitute financial, investment, or legal advice.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2><span class="icon" style="background:#fef2f2;">🚫</span> 5. Limitations of Liability</h2>
+      <p>In no event shall FinTrack or its developers be liable for any damages arising out of or in connection with your use or inability to use the App, including but not limited to:</p>
+      <ul>
+        <li>Loss of data or financial records</li>
+        <li>Loss of profit or business interruption</li>
+        <li>Any indirect, incidental, special, or consequential damages</li>
+      </ul>
+      <p>This limitation applies whether the claim is based on warranty, contract, tort, or any other legal theory, even if we have been advised of the possibility of such damages.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2><span class="icon" style="background:#eff6ff;">⚖️</span> 6. Governing Law</h2>
+      <p>These Terms shall be governed and construed in accordance with applicable laws, without regard to conflict of law provisions. You agree that any dispute arising from these Terms or your use of the App will be subject to the jurisdiction of competent courts in your region.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2><span class="icon" style="background:#f0fdf4;">🔄</span> 7. Changes to These Terms</h2>
+      <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will update the "Effective Date" at the top of this page when changes are made. Continued use of the App after any changes constitutes your acceptance of the new Terms.</p>
+      <p>We encourage you to review these Terms periodically for any updates.</p>
+    </div>
+
+    <div class="terms-section">
+      <h2><span class="icon" style="background:#eff6ff;">✉️</span> 8. Contact Us</h2>
+      <p>If you have any questions about these Terms of Service, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@fintrack.app" style="color:var(--blue);">support@fintrack.app</a></li>
+        <li><strong>Website:</strong> <a href="https://fintrack-app.vercel.app" style="color:var(--blue);">fintrack-app.vercel.app</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">FinTrack</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:support@fintrack.app">Contact</a>
+    </div>
+    <p>© 2026 FinTrack. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
