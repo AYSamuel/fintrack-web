@@ -25,6 +25,7 @@ export async function submitWaitlist(
     .insert({ email: normalised, source });
 
   if (error) {
+    console.error('[waitlist] Supabase error:', error.code, error.message, error.details);
     // Postgres unique-constraint violation
     if (error.code === '23505') {
       return { success: false, error: 'duplicate' };

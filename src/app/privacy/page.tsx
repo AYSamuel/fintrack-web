@@ -21,7 +21,7 @@ Our core principle: Traccia is built so that your financial data never leaves yo
   {
     id: "what-we-collect",
     title: "2. Information we collect",
-    content: `Website only: If you submit your email address via our waitlist form, we receive and store that email address to notify you when Traccia launches. Emails are stored securely in our database. We do not share your address with third parties.
+    content: `Website only: If you submit your email address via our waitlist form, we receive and store that email address to notify you when Traccia launches. Emails are stored securely in our Supabase PostgreSQL database. We do not share your address with third parties.
 
 The app: Traccia does not collect any personal data from app users. All financial data (transactions, balances, budgets, and analytics) is stored exclusively on your device, encrypted with AES-256. We have no access to it.`,
   },
@@ -37,7 +37,7 @@ App data is never used by us. We never have it.`,
     title: "4. Data storage",
     content: `App data: All financial data is stored locally on your device using AES-256 encryption. It is never transmitted to our servers or any third-party server, except for the initial read via your bank aggregator (see Section 6).
 
-Waitlist emails: Stored securely via Formspree. We do not maintain our own email database.`,
+Waitlist emails: Stored securely in our Supabase PostgreSQL database, hosted in the EU region.`,
   },
   {
     id: "third-party",
