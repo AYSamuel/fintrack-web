@@ -10,8 +10,8 @@ export default function WaitlistCTA() {
     <section ref={ref} id="waitlist" className="py-20 md:py-28 relative overflow-hidden">
       {/* Gradient background */}
       <div
-        className="absolute inset-0"
-        style={{ background: "linear-gradient(135deg, #2D3E85, #4A4A92)" }}
+        className="absolute inset-0 animate-gradient"
+        style={{ background: "linear-gradient(135deg, #1e3178, #2D3E85, #4A4A92, #6B5BC9, #2D3E85, #1e3178)" }}
       />
 
       {/* Atmospheric glows */}

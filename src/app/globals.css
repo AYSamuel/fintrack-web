@@ -212,12 +212,23 @@
    ANIMATIONS
    ══════════════════════════════════════════════ */
 
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @layer utilities {
   .animate-delay-100 { animation-delay: 100ms; }
   .animate-delay-200 { animation-delay: 200ms; }
   .animate-delay-300 { animation-delay: 300ms; }
   .animate-delay-400 { animation-delay: 400ms; }
   .animate-delay-500 { animation-delay: 500ms; }
+
+  .animate-gradient {
+    background-size: 250% 250%;
+    animation: gradientShift 10s ease infinite;
+  }
 
   .scrollbar-hide {
     -ms-overflow-style: none;

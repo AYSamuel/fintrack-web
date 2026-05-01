@@ -55,13 +55,13 @@ export default function Hero() {
         {/* Phone mockups — carousel on mobile, fanned layout on desktop */}
         <PhoneCarousel />
         <div className="hidden sm:flex items-end justify-center gap-4 md:gap-6 animate-slide-up animate-delay-300">
-          <div className="w-[140px] md:w-[180px]">
+          <div className="w-[140px] md:w-[180px] animate-float" style={{ animationDelay: "0s" }}>
             <PhoneMockup variant="transactions" />
           </div>
-          <div className="w-[180px] md:w-[220px] -mb-4">
+          <div className="w-[180px] md:w-[220px] -mb-4 animate-float" style={{ animationDelay: "2s" }}>
             <PhoneMockup variant="dashboard" featured />
           </div>
-          <div className="w-[140px] md:w-[180px]">
+          <div className="w-[140px] md:w-[180px] animate-float" style={{ animationDelay: "4s" }}>
             <PhoneMockup variant="chart" />
           </div>
         </div>

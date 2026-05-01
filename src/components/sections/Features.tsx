@@ -109,13 +109,12 @@ export default function Features() {
           {features.map((f, i) => (
             <div
               key={f.title}
-              className={`surface-card p-6 transition-all duration-700 hover:-translate-y-1 group ${
+              className={`surface-card p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[rgba(78,111,217,0.35)] hover:shadow-[0_8px_32px_rgba(78,111,217,0.12)] group ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
               style={{
-                boxShadow: "var(--shadow-sm)",
                 transitionDelay: `${i * 80}ms`,
               }}
             >
