@@ -2,22 +2,48 @@
 
 import { useState, FormEvent } from "react";
 import { submitWaitlist, type WaitlistSource } from "@/app/actions/waitlist";
+import { validateEmail, EMAIL_ERROR_MESSAGES } from "@/lib/emailValidation";
 
 interface WaitlistFormProps {
   source?: WaitlistSource;
 }
 
-type Status = "idle" | "loading" | "success" | "duplicate" | "error";
+type Status = "idle" | "loading" | "success" | "duplicate" | "no_mx" | "error";
 
 export default function WaitlistForm({ source = "hero" }: WaitlistFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
+  const [inlineError, setInlineError] = useState<string | null>(null);
+
+  function validateOnBlur() {
+    if (!email) return;
+    const result = validateEmail(email);
+    if (!result.valid) {
+      setInlineError(EMAIL_ERROR_MESSAGES[result.reason]);
+    }
+  }
+
+  function handleChange(value: string) {
+    setEmail(value);
+    // Clear inline error as soon as the user starts correcting
+    if (inlineError) setInlineError(null);
+    if (status !== "idle" && status !== "loading") setStatus("idle");
+  }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!email || status === "loading") return;
+    if (status === "loading") return;
 
+    // Client-side gate — same logic as the server, instant feedback
+    const clientResult = validateEmail(email);
+    if (!clientResult.valid) {
+      setInlineError(EMAIL_ERROR_MESSAGES[clientResult.reason]);
+      return;
+    }
+
+    setInlineError(null);
     setStatus("loading");
+
     const result = await submitWaitlist(email, source);
 
     if (result.success) {
@@ -25,6 +51,11 @@ export default function WaitlistForm({ source = "hero" }: WaitlistFormProps) {
       setEmail("");
     } else if (result.error === "duplicate") {
       setStatus("duplicate");
+    } else if (result.error === "no_mx") {
+      setStatus("no_mx");
+    } else if (result.error === "invalid") {
+      setInlineError(EMAIL_ERROR_MESSAGES["format"]);
+      setStatus("idle");
     } else {
       setStatus("error");
     }
@@ -58,6 +89,8 @@ export default function WaitlistForm({ source = "hero" }: WaitlistFormProps) {
     );
   }
 
+  const hasError = !!inlineError || status === "no_mx" || status === "error" || status === "duplicate";
+
   return (
     <div className="w-full max-w-md space-y-2">
       <form onSubmit={handleSubmit} className="flex gap-3 w-full">
@@ -65,16 +98,20 @@ export default function WaitlistForm({ source = "hero" }: WaitlistFormProps) {
           id="email"
           type="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => handleChange(e.target.value)}
+          onBlur={validateOnBlur}
           placeholder="Enter your email"
           aria-label="Email address"
+          aria-describedby={hasError ? "email-error" : undefined}
+          aria-invalid={hasError}
           required
           disabled={status === "loading"}
-          className="flex-1 px-4 py-3 min-h-[44px] rounded-xl text-sm outline-none transition-all duration-200 focus:ring-2 focus:ring-brand-blue/40 disabled:opacity-60"
+          className="flex-1 px-4 py-3 min-h-[44px] rounded-xl text-sm outline-none transition-all duration-200 focus:ring-2 disabled:opacity-60"
           style={{
             background: "var(--surface)",
-            border: "1px solid var(--border)",
+            border: `1px solid ${hasError ? "var(--accent-pink)" : "var(--border)"}`,
             color: "var(--text-primary)",
+            boxShadow: hasError ? "0 0 0 2px rgba(var(--accent-pink-rgb, 236,72,153),0.15)" : undefined,
           }}
         />
         <button
@@ -101,14 +138,27 @@ export default function WaitlistForm({ source = "hero" }: WaitlistFormProps) {
         </button>
       </form>
 
-      {status === "error" && (
-        <p role="alert" className="text-xs" style={{ color: "var(--accent-pink)" }}>
-          Something went wrong. Please try again.
+      {/* Inline validation error (format / disposable / suspicious) */}
+      {inlineError && (
+        <p id="email-error" role="alert" className="text-xs" style={{ color: "var(--accent-pink)" }}>
+          {inlineError}
         </p>
       )}
-      {status === "duplicate" && (
+
+      {/* Server-returned errors */}
+      {!inlineError && status === "no_mx" && (
+        <p id="email-error" role="alert" className="text-xs" style={{ color: "var(--accent-pink)" }}>
+          That email domain doesn&apos;t exist. Please check and try again.
+        </p>
+      )}
+      {!inlineError && status === "duplicate" && (
         <p role="alert" className="text-xs" style={{ color: "var(--text-secondary)" }}>
           This email is already on the list.
+        </p>
+      )}
+      {!inlineError && status === "error" && (
+        <p id="email-error" role="alert" className="text-xs" style={{ color: "var(--accent-pink)" }}>
+          Something went wrong. Please try again.
         </p>
       )}
     </div>
