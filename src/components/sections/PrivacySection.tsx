@@ -54,7 +54,7 @@ const cards = [
     title: "AES-256 encrypted",
     detail: "Same standard as banks",
     description:
-      "Your data is encrypted on-device using AES-256 — military-grade security used by financial institutions worldwide.",
+      "Your data is encrypted on-device using AES-256, the same standard used by financial institutions worldwide.",
     accentColor: "#6B5BC9",
     icon: (
       <svg

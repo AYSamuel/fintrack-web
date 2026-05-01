@@ -6,7 +6,7 @@ const steps = [
   {
     title: "Connect your bank",
     description:
-      "Link your account securely through your region's trusted provider. No credentials stored — ever.",
+      "Link your account securely through your region's trusted provider. No credentials stored. Ever.",
     highlight: "Plaid · Tink · Mono",
     color: "#4E6FD9",
     icon: (
@@ -28,7 +28,7 @@ const steps = [
   {
     title: "Traccia syncs",
     description:
-      "Transactions flow in automatically. No manual entry, no spreadsheets — just clean, accurate data.",
+      "Transactions flow in automatically. No manual entry, no spreadsheets. Just clean, accurate data.",
     color: "#00C98B",
     icon: (
       <svg
@@ -50,7 +50,7 @@ const steps = [
   {
     title: "See the full picture",
     description:
-      "Charts, budgets, and insights — all rendered on your device. Your finances, finally clear.",
+      "Charts, budgets, and insights, all rendered on your device. Your finances, finally clear.",
     color: "#6B5BC9",
     icon: (
       <svg

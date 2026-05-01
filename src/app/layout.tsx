@@ -4,11 +4,11 @@ import { SITE } from "../lib/constants";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Traccia — Your finances, beautifully traced",
+  title: "Traccia | Your finances, beautifully traced",
   description: SITE.description,
   metadataBase: new URL(SITE.url),
   openGraph: {
-    title: "Traccia — Your finances, beautifully traced",
+    title: "Traccia | Your finances, beautifully traced",
     description: SITE.description,
     type: "website",
     images: [
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         url: SITE.ogImage,
         width: 1200,
         height: 630,
-        alt: "Traccia — Privacy-first personal finance",
+        alt: "Traccia | Privacy-first personal finance",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Traccia — Your finances, beautifully traced",
+    title: "Traccia | Your finances, beautifully traced",
     description: SITE.description,
     images: [SITE.ogImage],
   },

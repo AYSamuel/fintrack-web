@@ -21,7 +21,7 @@ Our core principle: Traccia is built so that your financial data never leaves yo
   {
     id: "what-we-collect",
     title: "2. Information we collect",
-    content: `Website only: If you submit your email address via our waitlist form, we receive and store that email address to notify you when Traccia launches. We use Formspree to process this submission — see their privacy policy at formspree.io.
+    content: `Website only: If you submit your email address via our waitlist form, we receive and store that email address to notify you when Traccia launches. Emails are stored securely in our database. We do not share your address with third parties.
 
 The app: Traccia does not collect any personal data from app users. All financial data (transactions, balances, budgets, and analytics) is stored exclusively on your device, encrypted with AES-256. We have no access to it.`,
   },
@@ -30,7 +30,7 @@ The app: Traccia does not collect any personal data from app users. All financia
     title: "3. How we use information",
     content: `Waitlist emails are used solely to send you a launch notification. We will not send marketing emails, share your address with third parties, or contact you for any other reason without your explicit consent.
 
-App data is never used by us — because we never have it.`,
+App data is never used by us. We never have it.`,
   },
   {
     id: "data-storage",
@@ -57,7 +57,7 @@ These providers operate under their respective terms. Traccia uses them only to 
 
 1. You authenticate with your bank via the aggregator's secure flow (Plaid, Tink, or Mono). Your bank credentials are never seen or stored by Traccia.
 2. The aggregator returns an access token and your recent transactions to the app.
-3. The app stores this data locally on your device — encrypted, never transmitted.
+3. The app stores this data locally on your device, encrypted and never transmitted.
 4. Subsequent syncs follow the same pattern: aggregator → app → on-device storage only.
 
 Traccia acts as a relay from aggregator to device. We do not sit in the middle, log transactions, or maintain a copy.`,
