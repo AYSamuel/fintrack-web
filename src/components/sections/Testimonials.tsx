@@ -69,7 +69,7 @@ export default function Testimonials() {
               </p>
 
               <p className="text-xs font-medium" style={{ color: "var(--text-tertiary)" }}>
-                — {t.author}
+                {t.author}
               </p>
             </div>
           ))}

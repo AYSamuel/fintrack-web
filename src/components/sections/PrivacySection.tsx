@@ -5,7 +5,7 @@ import { useScrollReveal } from "../../hooks/useScrollReveal";
 const cards = [
   {
     title: "No cloud sync",
-    detail: "Data never touches a server",
+    detail: "Never stored on a server",
     description:
       "Everything stays local. Your financial data is never transmitted, backed up, or stored anywhere outside your device.",
     accentColor: "#4E6FD9",
@@ -108,7 +108,7 @@ export default function PrivacySection() {
             className="text-base max-w-md mx-auto"
             style={{ color: "var(--text-secondary)" }}
           >
-            No accounts. No cloud. No tracking. No compromise.
+            No accounts. No cloud storage. No tracking. No compromise.
           </p>
         </div>
 

@@ -73,12 +73,21 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {mobileOpen && (
-          <div
-            className="md:hidden pb-4 space-y-1 border-t"
-            style={{ borderColor: "var(--border-subtle)" }}
-          >
+      </div>
+
+      {/* Mobile menu — fixed overlay, never pushes content */}
+      {mobileOpen && (
+        <div
+          className="md:hidden fixed left-0 right-0 z-50 animate-fade-in"
+          style={{
+            top: "64px",
+            background: "var(--nav-bg)",
+            borderBottom: "1px solid var(--border-subtle)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+          }}
+        >
+          <div className="section-container py-3 space-y-1">
             <Link href="/#features" onClick={() => setMobileOpen(false)} className="block py-2.5 text-sm" style={{ color: "var(--text-secondary)" }}>
               Features
             </Link>
@@ -92,8 +101,8 @@ export default function Navbar() {
               Get early access
             </Link>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 }

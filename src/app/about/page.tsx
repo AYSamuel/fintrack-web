@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import WaitlistCTA from "../../components/sections/WaitlistCTA";
 
 export const metadata: Metadata = {
-  title: "About — Traccia",
+  title: "About | Traccia",
   description:
     "Why Traccia exists. Our mission, philosophy, and principles around privacy-first personal finance.",
 };
@@ -13,7 +13,7 @@ const principles = [
   {
     title: "Privacy by design",
     description:
-      "Privacy isn't a feature we added — it's the foundation everything is built on. Every architectural decision starts with: does this keep data on the device?",
+      "Privacy isn't a feature we added. It's the foundation everything is built on. Every architectural decision starts with: does this keep data on the device?",
     color: "#4E6FD9",
     icon: (
       <svg
@@ -33,7 +33,7 @@ const principles = [
   {
     title: "Local-first",
     description:
-      "Your device, your data, your rules. Traccia works fully offline. No internet required to view your finances — because your finances live on your phone, not our servers.",
+      "Your device, your data, your rules. Traccia works fully offline. No internet required to view your finances. Your finances live on your phone, not our servers.",
     color: "#00C98B",
     icon: (
       <svg
@@ -54,7 +54,7 @@ const principles = [
   {
     title: "Beautiful clarity",
     description:
-      "Complex financial data deserves better than a spreadsheet. Traccia turns transactions into visual stories — charts and insights that actually make sense.",
+      "Complex financial data deserves better than a spreadsheet. Traccia turns transactions into visual stories: charts and insights that actually make sense.",
     color: "#6B5BC9",
     icon: (
       <svg
@@ -76,7 +76,7 @@ const principles = [
   {
     title: "Global reach",
     description:
-      "Finance is universal. Traccia connects to banks across Europe, Africa, and North America — wherever you are, your money works with Traccia.",
+      "Finance is universal. Traccia connects to banks across Europe, Africa, and North America. Wherever you are, your money works with Traccia.",
     color: "#E67A3D",
     icon: (
       <svg
@@ -122,7 +122,7 @@ export default function AboutPage() {
               className="text-base md:text-lg leading-relaxed"
               style={{ color: "var(--text-secondary)" }}
             >
-              Because your financial life is deeply personal — and it has no business living on someone else&apos;s server.
+              Because your financial life is deeply personal. It has no business living on someone else&apos;s server.
             </p>
           </div>
         </section>
@@ -135,13 +135,13 @@ export default function AboutPage() {
               style={{ color: "var(--text-secondary)" }}
             >
               <p>
-                Most finance apps work against you. They harvest your transaction data, profile your spending habits, and sell that insight to advertisers. To use them, you hand over your most sensitive personal information — then hope for the best.
+                Most finance apps work against you. They harvest your transaction data, profile your spending habits, and sell that insight to advertisers. To use them, you hand over your most sensitive personal information and hope for the best.
               </p>
               <p>
                 We built Traccia on a different belief: your financial data is yours alone. It should never leave your device, never be analyzed by a third party, and never be used to target you with ads.
               </p>
               <p>
-                Traccia captures every financial trace locally, encrypts it on your device with AES-256, and gives you the visual clarity you need to understand your money — without any compromise. No accounts. No cloud. No tracking.
+                Traccia captures every financial trace locally, encrypts it on your device with AES-256, and gives you the visual clarity you need to understand your money. No accounts. No cloud storage. No tracking.
               </p>
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function AboutPage() {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: "var(--text-secondary)" }}
               >
-                We&apos;re working on expanding to more regions, deepening our bank integrations, and building community features — all within the same privacy-preserving architecture. More banks. More insights. Zero compromises.
+                We&apos;re working on expanding to more regions, deepening our bank integrations, and building community features, all within the same privacy-preserving architecture. More banks. More insights. Zero compromises.
               </p>
             </div>
           </div>

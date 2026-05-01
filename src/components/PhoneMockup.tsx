@@ -118,11 +118,11 @@ function ChartContent() {
 
 function TransactionsContent() {
   const items = [
-    { color: "#E85D8A", w: "70%" },
-    { color: "#00C98B", w: "55%" },
-    { color: "#4E6FD9", w: "80%" },
-    { color: "#E67A3D", w: "45%" },
-    { color: "#6B5BC9", w: "65%" },
+    { color: "#E85D8A", w: "70%", amount: "142", negative: true },
+    { color: "#00C98B", w: "55%", amount: "89",  negative: false },
+    { color: "#4E6FD9", w: "80%", amount: "213", negative: true },
+    { color: "#E67A3D", w: "45%", amount: "67",  negative: false },
+    { color: "#6B5BC9", w: "65%", amount: "156", negative: true },
   ];
   return (
     <div className="space-y-2.5">
@@ -135,9 +135,8 @@ function TransactionsContent() {
             <div className="h-1.5 rounded-full" style={{ width: item.w, background: "#2D2E35" }} />
             <div className="h-1 rounded-full w-1/3" style={{ background: "#23242B" }} />
           </div>
-          <div className="text-[9px] font-medium" style={{ color: i % 2 === 0 ? "#E85D8A" : "#00C98B" }}>
-            {i % 2 === 0 ? "-$" : "+$"}
-            {(Math.random() * 200 + 10).toFixed(0)}
+          <div className="text-[9px] font-medium" style={{ color: item.negative ? "#E85D8A" : "#00C98B" }}>
+            {item.negative ? "-$" : "+$"}{item.amount}
           </div>
         </div>
       ))}

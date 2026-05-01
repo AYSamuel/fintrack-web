@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Traccia",
+  title: "Terms of Service | Traccia",
   description: "Traccia's terms of service.",
 };
 
@@ -35,7 +35,7 @@ All financial data is stored locally on the user's device. Traccia does not prov
   {
     id: "ip",
     title: "4. Intellectual property",
-    content: `All rights, title, and interest in Traccia — including the app, website, design, code, and branding — are owned by Traccia. Nothing in these terms transfers any intellectual property rights to you.
+    content: `All rights, title, and interest in Traccia (including the app, website, design, code, and branding) are owned by Traccia. Nothing in these terms transfers any intellectual property rights to you.
 
 You are granted a limited, non-exclusive, non-transferable licence to use the app for personal, non-commercial purposes.`,
   },

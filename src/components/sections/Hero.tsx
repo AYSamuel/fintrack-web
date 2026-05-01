@@ -1,4 +1,5 @@
 import PhoneMockup from "../PhoneMockup";
+import PhoneCarousel from "../PhoneCarousel";
 import WaitlistForm from "../WaitlistForm";
 
 export default function Hero() {
@@ -41,7 +42,7 @@ export default function Hero() {
             style={{ color: "var(--text-secondary)" }}
           >
             Traccia automatically captures every transaction and transforms your
-            spending into clear, visual stories — all without ever leaving your
+            spending into clear, visual stories, all without ever leaving your
             device.
           </p>
 
@@ -51,15 +52,16 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Phone mockups */}
-        <div className="flex items-end justify-center gap-4 md:gap-6 animate-slide-up animate-delay-300">
-          <div className="hidden sm:block w-[140px] md:w-[180px]">
+        {/* Phone mockups — carousel on mobile, fanned layout on desktop */}
+        <PhoneCarousel />
+        <div className="hidden sm:flex items-end justify-center gap-4 md:gap-6 animate-slide-up animate-delay-300">
+          <div className="w-[140px] md:w-[180px]">
             <PhoneMockup variant="transactions" />
           </div>
           <div className="w-[180px] md:w-[220px] -mb-4">
             <PhoneMockup variant="dashboard" featured />
           </div>
-          <div className="hidden sm:block w-[140px] md:w-[180px]">
+          <div className="w-[140px] md:w-[180px]">
             <PhoneMockup variant="chart" />
           </div>
         </div>

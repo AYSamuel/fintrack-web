@@ -3,9 +3,9 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Traccia",
+  title: "Privacy Policy | Traccia",
   description:
-    "Traccia's privacy policy. Learn how we handle your data — and why the answer is: we mostly don't.",
+    "Traccia's privacy policy. Learn how we handle your data. The short answer: we mostly don't.",
 };
 
 const sections = [
@@ -16,14 +16,14 @@ const sections = [
 
 Effective date: April 30, 2026.
 
-Our core principle: Traccia is built so that your financial data never leaves your device. The app does not collect, transmit, or store personal financial data on our servers — because we never receive it.`,
+Our core principle: Traccia is built so that your financial data never leaves your device. The app does not collect, transmit, or store personal financial data on our servers. We never receive it.`,
   },
   {
     id: "what-we-collect",
     title: "2. Information we collect",
     content: `Website only: If you submit your email address via our waitlist form, we receive and store that email address to notify you when Traccia launches. We use Formspree to process this submission — see their privacy policy at formspree.io.
 
-The app: Traccia does not collect any personal data from app users. All financial data — transactions, balances, budgets, and analytics — is stored exclusively on your device, encrypted with AES-256. We have no access to it.`,
+The app: Traccia does not collect any personal data from app users. All financial data (transactions, balances, budgets, and analytics) is stored exclusively on your device, encrypted with AES-256. We have no access to it.`,
   },
   {
     id: "how-we-use",
@@ -44,11 +44,11 @@ Waitlist emails: Stored securely via Formspree. We do not maintain our own email
     title: "5. Third-party services",
     content: `Traccia integrates with the following bank aggregation providers to sync transactions. Each provider has their own privacy policy:
 
-• Plaid (North America) — plaid.com/legal/privacy-statement
-• Tink (Europe) — tink.com/privacy-policy
-• Mono (Africa) — mono.co/legal/privacy-policy
+• Plaid (North America): plaid.com/legal/privacy-statement
+• Tink (Europe): tink.com/privacy-policy
+• Mono (Africa): mono.co/legal/privacy-policy
 
-These providers operate under their respective terms. Traccia uses them only to fetch transaction data — which is then immediately stored on your device. We do not retain copies.`,
+These providers operate under their respective terms. Traccia uses them only to fetch transaction data, which is then immediately stored on your device. We do not retain copies.`,
   },
   {
     id: "bank-sync",

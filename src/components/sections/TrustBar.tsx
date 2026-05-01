@@ -6,7 +6,7 @@ const stats = [
   { value: "100%", label: "Local & private", color: "#4E6FD9" },
   { value: "AES-256", label: "Encryption", color: "#00C98B" },
   { value: "3", label: "Regions supported", color: "#6B5BC9" },
-  { value: "Zero", label: "Data sent to cloud", color: "#E85D8A" },
+  { value: "Zero", label: "Data stored in cloud", color: "#E85D8A" },
 ];
 
 export default function TrustBar() {
