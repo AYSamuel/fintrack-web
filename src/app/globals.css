@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Google Fonts ── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ══════════════════════════════════════════════
+   TRACCIA DESIGN SYSTEM — CSS Custom Properties
+   ══════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* ── Surfaces ── */
+    --bg-primary: #F8F9FD;
+    --bg-secondary: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-elevated: #F5F6FA;
+    --surface-glass: rgba(255, 255, 255, 0.7);
+
+    /* ── Text ── */
+    --text-primary: #1A1B1E;
+    --text-secondary: #6B6C73;
+    --text-tertiary: #9B9BA5;
+
+    /* ── Borders ── */
+    --border: #D1D2D9;
+    --border-subtle: #E8E9EE;
+    --divider: #E8E9EE;
+
+    /* ── Brand ── */
+    --brand-blue: #4E6FD9;
+    --brand-purple: #6B5BC9;
+    --brand-deep-blue: #3D4FA8;
+
+    /* ── Accents ── */
+    --accent-pink: #E85D8A;
+    --accent-orange: #E67A3D;
+    --accent-cyan: #00B8D9;
+    --accent-green: #00C98B;
+
+    /* ── Shadows ── */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+    --shadow-glow-blue: 0 0 40px rgba(78, 111, 217, 0.15);
+    --shadow-glow-purple: 0 0 40px rgba(107, 91, 201, 0.15);
+
+    /* ── Nav ── */
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    --nav-border: #E8E9EE;
+
+    /* ── Feature card icon bg ── */
+    --feature-icon-blue: rgba(78, 111, 217, 0.1);
+    --feature-icon-green: rgba(0, 201, 139, 0.1);
+    --feature-icon-purple: rgba(107, 91, 201, 0.1);
+    --feature-icon-pink: rgba(232, 93, 138, 0.1);
+    --feature-icon-orange: rgba(230, 122, 61, 0.1);
+    --feature-icon-cyan: rgba(0, 184, 217, 0.1);
+  }
+
+  .dark {
+    /* ── Surfaces ── */
+    --bg-primary: #0A0B0D;
+    --bg-secondary: #12131A;
+    --surface: #16171D;
+    --surface-elevated: #1D1E26;
+    --surface-glass: rgba(22, 23, 29, 0.8);
+
+    /* ── Text ── */
+    --text-primary: #E8E9ED;
+    --text-secondary: #8A8B95;
+    --text-tertiary: #5A5B65;
+
+    /* ── Borders ── */
+    --border: #2D2E35;
+    --border-subtle: #23242B;
+    --divider: #23242B;
+
+    /* ── Shadows ── */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+    --shadow-glow-blue: 0 0 60px rgba(78, 111, 217, 0.2);
+    --shadow-glow-purple: 0 0 60px rgba(107, 91, 201, 0.2);
+
+    /* ── Nav ── */
+    --nav-bg: rgba(10, 11, 13, 0.85);
+    --nav-border: #23242B;
+
+    /* ── Feature card icon bg ── */
+    --feature-icon-blue: rgba(78, 111, 217, 0.15);
+    --feature-icon-green: rgba(0, 201, 139, 0.15);
+    --feature-icon-purple: rgba(107, 91, 201, 0.15);
+    --feature-icon-pink: rgba(232, 93, 138, 0.15);
+    --feature-icon-orange: rgba(230, 122, 61, 0.15);
+    --feature-icon-cyan: rgba(0, 184, 217, 0.15);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(78, 111, 217, 0.3);
+    color: var(--text-primary);
+  }
+
+  /* Keyboard focus — visible ring on all interactive elements */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--brand-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   UTILITY CLASSES
+   ══════════════════════════════════════════════ */
+
+@layer components {
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #4E6FD9, #6B5BC9);
+  }
+
+  .text-gradient-green {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #00C98B, #00B8D9);
+  }
+
+  /* Glass effect */
+  .glass {
+    background: var(--surface-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle);
+  }
+
+  /* Surface card */
+  .surface-card {
+    background: var(--surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+  }
+
+  .surface-card-elevated {
+    background: var(--surface-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 md:px-8;
+  }
+
+  /* Section label */
+  .section-label {
+    @apply text-xs font-medium tracking-[0.15em] uppercase;
+    color: var(--text-tertiary);
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+    color: var(--text-primary);
+  }
+
+  /* CTA button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-medium text-white transition-all duration-200;
+    background: linear-gradient(135deg, #4E6FD9, #6B5BC9);
+    box-shadow: 0 2px 12px rgba(78, 111, 217, 0.3);
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(78, 111, 217, 0.4);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-medium transition-all duration-200;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    background: transparent;
+  }
+  .btn-secondary:hover {
+    background: var(--surface-elevated);
+    border-color: var(--brand-blue);
+  }
+
+  /* Feature icon container */
+  .feature-icon {
+    @apply w-11 h-11 rounded-xl flex items-center justify-center;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   ANIMATIONS
+   ══════════════════════════════════════════════ */
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
