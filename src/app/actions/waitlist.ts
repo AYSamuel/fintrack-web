@@ -23,7 +23,7 @@ async function domainHasMxRecord(domain: string): Promise<boolean> {
     return Array.isArray(records) && records.length > 0;
   } catch (err) {
     // Fail open on timeout so a slow DNS server never blocks a real user.
-    // Fail closed on ENOTFOUND / ENODATA — domain genuinely doesn't exist.
+    // Fail closed on ENOTFOUND / ENODATA, domain genuinely doesn't exist.
     if (err instanceof Error) {
       if (err.message === 'mx_timeout') return true;
       const code = (err as NodeJS.ErrnoException).code;
@@ -37,7 +37,7 @@ export async function submitWaitlist(
   email: string,
   source: WaitlistSource = 'hero'
 ): Promise<WaitlistResult> {
-  // Layer 1 — format + disposable domain + suspicious pattern
+  // Layer 1, format + disposable domain + suspicious pattern
   const validation = validateEmail(email);
   if (!validation.valid) {
     return { success: false, error: 'invalid' };
@@ -46,13 +46,13 @@ export async function submitWaitlist(
   const { normalised } = validation;
   const domain = normalised.split('@')[1];
 
-  // Layer 2 — MX record existence (domain must have a real mail server)
+  // Layer 2, MX record existence (domain must have a real mail server)
   const hasMx = await domainHasMxRecord(domain);
   if (!hasMx) {
     return { success: false, error: 'no_mx' };
   }
 
-  // Layer 3 — persist (unique constraint catches duplicate emails)
+  // Layer 3, persist (unique constraint catches duplicate emails)
   const { error } = await supabase
     .from('waitlist')
     .insert({ email: normalised, source });

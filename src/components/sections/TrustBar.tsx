@@ -2,11 +2,12 @@
 
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 
+// Stats arranged for psychological contrast: 100% (yours) vs 0 (ours).
 const stats = [
-  { value: "100%", label: "Local & private", color: "#4E6FD9" },
-  { value: "AES-256", label: "Encryption", color: "#00C98B" },
-  { value: "3", label: "Regions supported", color: "#6B5BC9" },
-  { value: "Zero", label: "Data stored in cloud", color: "#E85D8A" },
+  { value: "100%", label: "On your phone", color: "#11A675" },
+  { value: "0", label: "Data on our servers", color: "#0A6E4D" },
+  { value: "AES-256", label: "Bank-level encryption", color: "#00C98B" },
+  { value: "12K+", label: "Banks supported", color: "#F4B860" },
 ];
 
 export default function TrustBar() {

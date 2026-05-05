@@ -5,14 +5,14 @@ import WaitlistForm from "../WaitlistForm";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28">
-      {/* Background glow */}
+      {/* Background glow, emerald-forward */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at center, rgba(78,111,217,0.08) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(ellipse at center, rgba(17,166,117,0.10) 0%, transparent 70%)" }}
       />
       <div
         className="absolute top-40 right-0 w-[400px] h-[400px] pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at center, rgba(107,91,201,0.06) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(ellipse at center, rgba(10,110,77,0.08) 0%, transparent 70%)" }}
       />
 
       <div className="section-container relative">
@@ -27,23 +27,22 @@ export default function Hero() {
             }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
-            Every transaction leaves a trace
+            100% on your phone
           </div>
 
-          {/* Headline */}
+          {/* Headline, the whole brand argument in two beats */}
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-5 animate-fade-in-up">
-            Your finances.{" "}
-            <span className="text-gradient">Beautifully traced.</span>
+            Track your spending.{" "}
+            <span className="text-gradient">Without anyone tracking you.</span>
           </h1>
 
-          {/* Sub */}
+          {/* Sub, four short sentences. Each one is a promise. */}
           <p
             className="text-base md:text-lg leading-relaxed max-w-lg mx-auto mb-8 animate-fade-in-up animate-delay-100"
             style={{ color: "var(--text-secondary)" }}
           >
-            Traccia automatically captures every transaction and transforms your
-            spending into clear, visual stories, all without ever leaving your
-            device.
+            Every transaction stays on your phone. Encrypted with bank-level
+            security. Never uploaded. Never sold. Never seen by us.
           </p>
 
           {/* CTA */}
@@ -52,7 +51,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Phone mockups — carousel on mobile, fanned layout on desktop */}
+        {/* Phone mockups, carousel on mobile, fanned layout on desktop */}
         <PhoneCarousel />
         <div className="hidden sm:flex items-end justify-center gap-4 md:gap-6 animate-slide-up animate-delay-300">
           <div className="w-[140px] md:w-[180px] animate-float" style={{ animationDelay: "0s" }}>

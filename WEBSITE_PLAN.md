@@ -1,14 +1,14 @@
-# Traccia Website — Build Plan
+# MonieTally Website, Build Plan
 
 > **Status:** Planning  
 > **Last updated:** 2026-04-30  
-> **Target:** traccia.app (or traccia.com) — currently deployed via Vercel
+> **Target:** monietally.com (or monietally.com), currently deployed via Vercel
 
 ---
 
 ## 1. Overview
 
-A modern, premium landing site for **Traccia** — a privacy-first personal finance app. The site serves two purposes: (1) communicate what Traccia is and build trust, and (2) collect waitlist signups via email.
+A modern, premium landing site for **MonieTally**, a privacy-first personal finance app. The site serves two purposes: (1) communicate what MonieTally is and build trust, and (2) collect waitlist signups via email.
 
 ### Design direction
 
@@ -16,8 +16,8 @@ A modern, premium landing site for **Traccia** — a privacy-first personal fina
 | --------------- | ------------------------------------------------------------ |
 | Visual style    | **Dark & premium** as the default feel (Linear / Vercel aesthetic), with full **light/dark mode** support |
 | Imagery         | **Real app screenshots** inside phone frames. Stylized code mockups as placeholders until the app UI is finalized |
-| Copy tone       | **Confident & direct** — short, punchy, authoritative. No fluff |
-| Animations      | **Rich & dynamic** — scroll-triggered reveals, floating mockups, gradient animations, subtle parallax |
+| Copy tone       | **Confident & direct**, short, punchy, authoritative. No fluff |
+| Animations      | **Rich & dynamic**, scroll-triggered reveals, floating mockups, gradient animations, subtle parallax |
 | Hero layout     | **Centered** headline + subtext on top, three phone mockups fanned/staggered below |
 
 ### Pages
@@ -25,7 +25,7 @@ A modern, premium landing site for **Traccia** — a privacy-first personal fina
 | Page     | Route      | Purpose                                                    |
 | -------- | ---------- | ---------------------------------------------------------- |
 | Landing  | `/`        | Hero, trust bar, features, how-it-works, privacy, regions, testimonials, waitlist CTA |
-| About    | `/about`   | Product mission & philosophy — why Traccia exists           |
+| About    | `/about`   | Product mission & philosophy, why MonieTally exists           |
 | Privacy  | `/privacy` | Standard legal privacy policy                               |
 | Terms    | `/terms`   | Standard legal terms of service                             |
 
@@ -41,17 +41,17 @@ A modern, premium landing site for **Traccia** — a privacy-first personal fina
 | TypeScript       | **TypeScript 5**                | Type safety across components                                |
 | Waitlist backend | **Supabase** (PostgreSQL)       | Stores waitlist emails in a real database; queryable, manageable via dashboard |
 | Email delivery   | **None yet** (add Resend when domain is ready) | UI confirmation only at launch; transactional email added post-domain |
-| Scroll animation | **Intersection Observer** (native) | No dependency — custom hook for scroll-triggered reveals   |
+| Scroll animation | **Intersection Observer** (native) | No dependency, custom hook for scroll-triggered reveals   |
 | Hosting          | **Vercel** (already configured) | Zero-config deploys from Git, edge CDN                       |
 | Output           | **Next.js on Vercel** (serverless)     | Removes `output: 'export'`; enables API routes and Server Actions for the Supabase backend |
 
 ### Project structure
 
 ```
-Traccia/
+MonieTally/
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx              # Root layout — fonts, theme provider, metadata
+│   │   ├── layout.tsx              # Root layout, fonts, theme provider, metadata
 │   │   ├── page.tsx                # Landing page (assembles all sections)
 │   │   ├── globals.css             # Tailwind directives + CSS custom properties
 │   │   ├── about/
@@ -86,7 +86,7 @@ Traccia/
 │   │   ├── transactions.png
 │   │   └── charts.png
 │   ├── og-image.png                # Open Graph share image
-│   └── favicon.svg                 # Traccia logo favicon
+│   └── favicon.svg                 # MonieTally logo favicon
 ├── tailwind.config.ts              # Design system tokens
 ├── postcss.config.js
 ├── next.config.js                  # Static export config
@@ -197,22 +197,22 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
 
 ### 4.1 Landing Page (`/`)
 
-#### Section 1 — Navbar (sticky)
+#### Section 1, Navbar (sticky)
 
-- **Left:** Logo icon (gradient rounded square with pulse/chart SVG) + "Traccia" wordmark
-- **Center (desktop):** Links — Features, Privacy, About
+- **Left:** Logo icon (gradient rounded square with pulse/chart SVG) + "MonieTally" wordmark
+- **Center (desktop):** Links, Features, Privacy, About
 - **Right:** Theme toggle (sun/moon) + "Get early access" CTA button
 - **Mobile:** Hamburger → slide-down menu with all links
 - **Behavior:** Sticky top, glass backdrop blur, border-bottom in theme color
 - **Animation:** None (always visible)
 
-#### Section 2 — Hero
+#### Section 2, Hero
 
 - **Layout:** Centered, stacked vertically
 - **Content (top to bottom):**
-  1. **Badge pill:** Green dot + "Every transaction leaves a trace" — small rounded pill
-  2. **Headline:** "Your finances. **Beautifully traced.**" — H1, gradient on "Beautifully traced."
-  3. **Subtext:** "Traccia automatically captures every transaction and transforms your spending into clear, visual stories — all without ever leaving your device." — body text, secondary color
+  1. **Badge pill:** Green dot + "Every transaction leaves a trace", small rounded pill
+  2. **Headline:** "Your finances. **Beautifully traced.**", H1, gradient on "Beautifully traced."
+  3. **Subtext:** "MonieTally automatically captures every transaction and transforms your spending into clear, visual stories, all without ever leaving your device.", body text, secondary color
   4. **Waitlist form:** Email input + "Get early access" button, inline on desktop, stacked on mobile
   5. **Phone mockups:** Three phones in a fan arrangement:
      - Left phone: Transaction list screen (slightly rotated, smaller, partially behind center)
@@ -230,7 +230,7 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
   - When screenshots arrive: swap `<Image>` src from mockup component to `/public/screenshots/*.png`
   - Phone frame: dark surface (#16171D) with rounded corners, subtle notch, status bar dots
 
-#### Section 3 — Trust Bar
+#### Section 3, Trust Bar
 
 - **Layout:** Full-width band, elevated surface background, top/bottom border
 - **Content:** 4 stats in a row (2x2 on mobile):
@@ -242,9 +242,9 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
   | `Zero`    | Data sent to cloud | accent-pink |
 - **Animation:** Counter/fade-in on scroll into view
 
-#### Section 4 — Features
+#### Section 4, Features
 
-- **Label:** "What Traccia does"
+- **Label:** "What MonieTally does"
 - **Heading:** "Everything you need to **understand your money**" (gradient on last part)
 - **Layout:** 3-column grid (1 col mobile, 2 col tablet, 3 col desktop), 6 cards
 - **Cards:**
@@ -259,7 +259,7 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
 - **Card design:** `surface-card` with icon container (colored bg), title, description. Hover: lift -1px + shadow increase
 - **Animation:** Staggered scroll-reveal (each card fades in 100ms after the previous)
 
-#### Section 5 — How It Works (NEW)
+#### Section 5, How It Works (NEW)
 
 - **Label:** "How it works"
 - **Heading:** "Three steps to financial clarity"
@@ -268,12 +268,12 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
   | Step | Title               | Description                                    | Icon/Visual           |
   | ---- | ------------------- | ---------------------------------------------- | --------------------- |
   | 1    | Connect your bank   | Link your account securely through your region's provider | Bank/link icon + "Plaid · Tink · Mono" subtitle |
-  | 2    | Traccia syncs       | Transactions flow in automatically. No manual entry, ever | Sync/refresh icon + animated dots |
-  | 3    | See the full picture| Charts, budgets, and insights — all on your device | Chart/eye icon + mini mockup preview |
+  | 2    | MonieTally syncs       | Transactions flow in automatically. No manual entry, ever | Sync/refresh icon + animated dots |
+  | 3    | See the full picture| Charts, budgets, and insights, all on your device | Chart/eye icon + mini mockup preview |
 - **Visual:** A horizontal line connects the 3 steps (vertical on mobile). Each step has a numbered circle (1, 2, 3) on the line, with content below/beside it.
 - **Animation:** Line draws in on scroll, then each step reveals sequentially
 
-#### Section 6 — Privacy Manifesto
+#### Section 6, Privacy Manifesto
 
 - **Label:** "Privacy first"
 - **Heading:** "Your data. Your device. Period."
@@ -288,7 +288,7 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
 - **Background:** Subtle gradient shift from primary bg
 - **Animation:** Cards fade-in-up on scroll
 
-#### Section 7 — Region Map
+#### Section 7, Region Map
 
 - **Label:** "Works where you are"
 - **Heading:** "Global bank sync, local storage"
@@ -302,7 +302,7 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
 - **Card design:** Surface card with colored top accent bar, provider logo/name, region name large, regulatory detail small
 - **Animation:** Scroll reveal, staggered
 
-#### Section 8 — Testimonials (NEW)
+#### Section 8, Testimonials (NEW)
 
 - **Label:** "What people say"
 - **Heading:** "Trusted by early users"
@@ -310,31 +310,31 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
 - **Content:** Placeholder quotes for now:
   | Quote | Attribution |
   |-------|-------------|
-  | "Finally, a finance app that doesn't want my data." | — Early beta user |
-  | "The charts made me actually understand where my money goes." | — Beta tester |
-  | "I love that everything stays on my phone. No cloud, no worry." | — Waitlist member |
+  | "Finally, a finance app that doesn't want my data." |, Early beta user |
+  | "The charts made me actually understand where my money goes." |, Beta tester |
+  | "I love that everything stays on my phone. No cloud, no worry." |, Waitlist member |
 - **Card design:** Surface card with large opening quotation mark in brand-blue/purple, quote text, attribution in tertiary text
 - **Note:** Replace with real testimonials once beta users provide feedback
 - **Animation:** Scroll reveal
 
-#### Section 9 — Waitlist CTA
+#### Section 9, Waitlist CTA
 
 - **Background:** Full-width gradient (gradient-cta: #2D3E85 → #4A4A92)
 - **Content:**
   1. Label: "Join the waitlist"
   2. Heading: "Be the first to trace your finances" (white text)
   3. Subtext: "Get early access when we launch. No spam, ever." (white/60%)
-  4. Waitlist form (same component, but styled for dark gradient background — white/translucent input)
+  4. Waitlist form (same component, but styled for dark gradient background, white/translucent input)
 - **Animation:** Section fade-in on scroll, form elements slide up
 
-#### Section 10 — Footer
+#### Section 10, Footer
 
 - **Layout:** 4-column grid (brand + tagline | Product links | Company links | empty or social)
 - **Content:**
   - Brand: Logo + "Every transaction leaves a trace."
   - Product: Features, Privacy, Waitlist
   - Company: About, Privacy policy, Terms of service
-  - Bottom bar: © 2026 Traccia. All rights reserved. | "Made with care. Your data stays yours."
+  - Bottom bar: © 2026 MonieTally. All rights reserved. | "Made with care. Your data stays yours."
 - **Style:** Secondary bg, subtle top border
 
 ---
@@ -345,17 +345,17 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
 
 **Sections:**
 
-1. **Hero:** "Why Traccia exists" — centered heading with gradient text
+1. **Hero:** "Why MonieTally exists", centered heading with gradient text
 2. **Mission statement:** 2-3 paragraphs explaining the philosophy:
    - The problem: finance apps that harvest your data, sell to advertisers, or require cloud accounts
    - The belief: your financial data is deeply personal and should stay on your device
-   - The solution: Traccia captures every financial trace locally, encrypts it, and gives you visual clarity without compromise
+   - The solution: MonieTally captures every financial trace locally, encrypts it, and gives you visual clarity without compromise
 3. **Principles:** 3-4 cards:
-   - Privacy by design — not an afterthought
-   - Local-first — your device, your data, your rules
-   - Beautiful clarity — complex data made visually simple
-   - Global reach — works wherever you bank
-4. **Looking ahead:** Brief paragraph about the roadmap vision (bank sync, more regions, community features — all privacy-preserving)
+   - Privacy by design, not an afterthought
+   - Local-first, your device, your data, your rules
+   - Beautiful clarity, complex data made visually simple
+   - Global reach, works wherever you bank
+4. **Looking ahead:** Brief paragraph about the roadmap vision (bank sync, more regions, community features, all privacy-preserving)
 5. **Waitlist CTA:** Same component as landing page
 
 ---
@@ -365,16 +365,16 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
 **Format:** Standard legal document with numbered sections
 
 **Structure:**
-1. Introduction — what Traccia is, effective date
-2. Information we collect — minimal: only waitlist email (on the website). The app collects zero data.
-3. How we use information — only to send launch notifications
-4. Data storage — app data is device-only, AES-256 encrypted, never transmitted
-5. Third-party services — bank aggregators (Plaid/Tink/Mono) and their own privacy policies
-6. Bank sync data flow — explain the relay architecture: aggregator tokens only, transaction data stays on device
-7. Cookies — none on the website (or minimal analytics if added later)
-8. Children's privacy — not directed at children under 13
-9. Changes to this policy — how we notify
-10. Contact — email address
+1. Introduction, what MonieTally is, effective date
+2. Information we collect, minimal: only waitlist email (on the website). The app collects zero data.
+3. How we use information, only to send launch notifications
+4. Data storage, app data is device-only, AES-256 encrypted, never transmitted
+5. Third-party services, bank aggregators (Plaid/Tink/Mono) and their own privacy policies
+6. Bank sync data flow, explain the relay architecture: aggregator tokens only, transaction data stays on device
+7. Cookies, none on the website (or minimal analytics if added later)
+8. Children's privacy, not directed at children under 13
+9. Changes to this policy, how we notify
+10. Contact, email address
 
 **Design:** Clean, readable typography. Numbered sections with clear headings. Surface card container with generous padding. Table of contents sidebar on desktop.
 
@@ -389,16 +389,16 @@ All colors are defined as **Tailwind custom colors** in `tailwind.config.ts` and
 2. Description of service
 3. User responsibilities
 4. Intellectual property
-5. Disclaimer of warranties — app provided "as is"
+5. Disclaimer of warranties, app provided "as is"
 6. Limitation of liability
-7. Bank sync disclaimer — Traccia is not a bank, not a financial advisor
-8. Third-party services — aggregator terms
+7. Bank sync disclaimer, MonieTally is not a bank, not a financial advisor
+8. Third-party services, aggregator terms
 9. Termination
 10. Governing law
 11. Changes to terms
 12. Contact
 
-**Design:** Same layout as Privacy page — numbered sections, sidebar ToC on desktop, surface card container.
+**Design:** Same layout as Privacy page, numbered sections, sidebar ToC on desktop, surface card container.
 
 ---
 
@@ -440,7 +440,7 @@ A custom `useScrollReveal` hook using Intersection Observer:
 
 ### 5.4 Background effects
 
-- Hero: Radial gradient glow (blue, centered) — static but large and atmospheric
+- Hero: Radial gradient glow (blue, centered), static but large and atmospheric
 - Subtle gradient mesh/noise texture on dark mode backgrounds (CSS only, no images)
 - CTA section: animated gradient shift (very slow, background-position animation)
 
@@ -460,12 +460,12 @@ A custom `useScrollReveal` hook using Intersection Observer:
 
 | Tag                | Value                                                                |
 | ------------------ | -------------------------------------------------------------------- |
-| `<title>`          | Traccia — Your finances, beautifully traced                          |
+| `<title>`          | MonieTally, Your finances, beautifully traced                          |
 | `meta description` | Privacy-first personal finance app. Track spending, see visual insights, all on your device. |
-| `og:image`         | `/og-image.png` — branded card with Traccia logo + tagline           |
+| `og:image`         | `/og-image.png`, branded card with MonieTally logo + tagline           |
 | `og:type`          | website                                                              |
 | `twitter:card`     | summary_large_image                                                  |
-| Favicon            | SVG favicon — gradient square with chart icon                        |
+| Favicon            | SVG favicon, gradient square with chart icon                        |
 
 ---
 
@@ -479,9 +479,9 @@ The phone mockups are designed to accept either:
 ### When ready to swap:
 
 1. Take 3 screenshots from the Flutter app:
-   - `dashboard.png` — Home/dashboard screen
-   - `transactions.png` — Transaction list
-   - `charts.png` — Analytics/charts screen
+   - `dashboard.png`, Home/dashboard screen
+   - `transactions.png`, Transaction list
+   - `charts.png`, Analytics/charts screen
 2. Drop them into `/public/screenshots/`
 3. In `PhoneMockup.tsx`, set `mode="screenshot"` and pass the image path
 4. The phone frame, status bar, and scaling are handled by the component
@@ -490,15 +490,15 @@ Recommended screenshot dimensions: **390 x 844px** (iPhone 14 Pro viewport)
 
 ---
 
-## 9. Waitlist Backend — Supabase
+## 9. Waitlist Backend, Supabase
 
 ### Why Supabase instead of Formspree
-Formspree routes emails through a third-party dashboard and has no queryable database. Supabase stores submissions in a proper PostgreSQL table — filterable, exportable, and manageable directly. It also unblocks adding email sending (Resend) once a custom domain is available, without changing the form component.
+Formspree routes emails through a third-party dashboard and has no queryable database. Supabase stores submissions in a proper PostgreSQL table, filterable, exportable, and manageable directly. It also unblocks adding email sending (Resend) once a custom domain is available, without changing the form component.
 
 ### Architecture
-- `output: 'export'` is **removed** from `next.config.js` — the site runs as a standard Next.js app on Vercel with serverless functions
+- `output: 'export'` is **removed** from `next.config.js`, the site runs as a standard Next.js app on Vercel with serverless functions
 - A Next.js **Server Action** (or API route `/api/waitlist`) receives the form POST, validates the email, and inserts a row into Supabase
-- The Supabase anon key is used server-side only — never exposed to the browser
+- The Supabase anon key is used server-side only, never exposed to the browser
 - Row Level Security (RLS) on the `waitlist` table: inserts allowed, reads denied for anon role
 
 ### Supabase table schema
@@ -512,7 +512,7 @@ create table waitlist (
 ```
 
 ### Setup steps
-1. Create a Supabase project (free tier — 500 MB, 50,000 rows, sufficient for launch)
+1. Create a Supabase project (free tier, 500 MB, 50,000 rows, sufficient for launch)
 2. Run the schema above in the Supabase SQL editor
 3. Enable RLS on the `waitlist` table; add insert policy for `anon`
 4. Copy `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` → add to `.env.local` and Vercel environment variables
@@ -522,7 +522,7 @@ create table waitlist (
 ### Form behavior (unchanged from original spec)
 - **Idle:** Email input + "Get early access" button
 - **Loading:** Button shows spinner, input disabled
-- **Success:** Green check + "You're on the list!" replaces the form — no confirmation email sent yet
+- **Success:** Green check + "You're on the list!" replaces the form, no confirmation email sent yet
 - **Error:** Clear, actionable message below form + retry possible
 
 ### Future: adding email (when domain is ready)
@@ -552,7 +552,7 @@ The existing `vercel.json` has security headers. Updated config for Next.js:
 }
 ```
 
-Next.js static export will generate an `out/` directory. Vercel auto-detects Next.js and handles this. No additional config needed — just push to Git.
+Next.js static export will generate an `out/` directory. Vercel auto-detects Next.js and handles this. No additional config needed, just push to Git.
 
 ---
 
@@ -560,7 +560,7 @@ Next.js static export will generate an `out/` directory. Vercel auto-detects Nex
 
 | Phase | Task                                                        | Dependencies    |
 | ----- | ----------------------------------------------------------- | --------------- |
-| 1     | Project setup: package.json, configs, install dependencies  | —               |
+| 1     | Project setup: package.json, configs, install dependencies  |,               |
 | 2     | Design system: tailwind.config.ts, globals.css, CSS vars    | Phase 1         |
 | 3     | Shared components: Navbar, Footer, ThemeToggle, WaitlistForm, PhoneMockup | Phase 2 |
 | 4     | Landing page sections: Hero, TrustBar, Features, HowItWorks, PrivacySection, RegionMap, Testimonials, WaitlistCTA | Phase 3 |
@@ -614,5 +614,5 @@ The following files have already been written during the initial build attempt. 
 | `src/app/about/page.tsx` | About/mission page |
 | `src/app/privacy/page.tsx` | Privacy policy |
 | `src/app/terms/page.tsx` | Terms of service |
-| `public/favicon.svg` | Traccia favicon |
+| `public/favicon.svg` | MonieTally favicon |
 | `public/og-image.png` | Open Graph image (generated) |

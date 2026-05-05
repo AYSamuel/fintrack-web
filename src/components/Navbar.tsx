@@ -25,7 +25,7 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="text-lg font-semibold tracking-tight" style={{ color: "var(--text-primary)" }}>
-              Traccia
+              MonieTally
             </span>
           </Link>
 
@@ -75,7 +75,7 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile menu — fixed overlay, never pushes content */}
+      {/* Mobile menu, fixed overlay, never pushes content */}
       {mobileOpen && (
         <div
           className="md:hidden fixed left-0 right-0 z-50 animate-fade-in"

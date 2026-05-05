@@ -5,17 +5,17 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Traccia | Your finances, beautifully traced",
+  title: "MonieTally | Money on your mind. Not on our servers.",
   description: SITE.description,
   metadataBase: new URL(SITE.url),
   openGraph: {
-    title: "Traccia | Your finances, beautifully traced",
+    title: "MonieTally | Money on your mind. Not on our servers.",
     description: SITE.description,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Traccia | Your finances, beautifully traced",
+    title: "MonieTally | Money on your mind. Not on our servers.",
     description: SITE.description,
   },
   icons: {

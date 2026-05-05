@@ -4,11 +4,11 @@ import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 const steps = [
   {
-    title: "Connect your bank",
+    title: "Plug in your bank",
     description:
-      "Link your account securely through your region's trusted provider. No credentials stored. Ever.",
+      "Connect securely through your region's trusted provider. We never see your credentials. Your bank holds them. We don't.",
     highlight: "Plaid · Tink · Mono",
-    color: "#4E6FD9",
+    color: "#11A675",
     icon: (
       <svg
         width="24"
@@ -26,9 +26,9 @@ const steps = [
     ),
   },
   {
-    title: "Traccia syncs",
+    title: "We do the math",
     description:
-      "Transactions flow in automatically. No manual entry, no spreadsheets. Just clean, accurate data.",
+      "Transactions flow in and add up automatically. No spreadsheets. No manual entry. Just numbers that finally make sense.",
     color: "#00C98B",
     icon: (
       <svg
@@ -48,10 +48,10 @@ const steps = [
     ),
   },
   {
-    title: "See the full picture",
+    title: "You see clearly",
     description:
-      "Charts, budgets, and insights, all rendered on your device. Your finances, finally clear.",
-    color: "#6B5BC9",
+      "Charts, budgets, and insights, rendered entirely on your phone. Your money, no longer a mystery.",
+    color: "#0A6E4D",
     icon: (
       <svg
         width="24"
@@ -85,14 +85,14 @@ export default function HowItWorks() {
         >
           <p className="section-label mb-3">How it works</p>
           <h2 className="section-heading">
-            Three steps to{" "}
-            <span className="text-gradient">financial clarity</span>
+            Three steps.{" "}
+            <span className="text-gradient">That&apos;s the whole thing.</span>
           </h2>
         </div>
 
         {/* Steps grid */}
         <div className="relative">
-          {/* Connecting line — desktop, draws in when visible */}
+          {/* Connecting line, desktop, draws in when visible */}
           <div
             className="hidden md:block absolute h-px top-10 z-0"
             style={{

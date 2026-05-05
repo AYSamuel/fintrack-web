@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Traccia — Privacy-first personal finance';
+export const alt = 'MonieTally. The finance app that does not track you.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -10,7 +10,7 @@ export default function Image() {
     (
       <div
         style={{
-          background: '#0D0D0F',
+          background: '#04140F',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -21,7 +21,7 @@ export default function Image() {
           overflow: 'hidden',
         }}
       >
-        {/* Blue glow — top left */}
+        {/* Blue glow, top left */}
         <div
           style={{
             position: 'absolute',
@@ -30,12 +30,12 @@ export default function Image() {
             width: 600,
             height: 600,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(59,130,246,0.22) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(17,166,117,0.30) 0%, transparent 70%)',
             display: 'flex',
           }}
         />
 
-        {/* Purple glow — bottom right */}
+        {/* Purple glow, bottom right */}
         <div
           style={{
             position: 'absolute',
@@ -44,7 +44,7 @@ export default function Image() {
             width: 600,
             height: 600,
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(139,92,246,0.22) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(244,184,96,0.18) 0%, transparent 70%)',
             display: 'flex',
           }}
         />
@@ -63,14 +63,14 @@ export default function Image() {
             style={{
               fontSize: 104,
               fontWeight: 800,
-              background: 'linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%)',
+              background: 'linear-gradient(135deg, #14B881 0%, #5DDDA8 100%)',
               backgroundClip: 'text',
               color: 'transparent',
               letterSpacing: '-4px',
               lineHeight: 1,
             }}
           >
-            Traccia
+            MonieTally
           </div>
 
           {/* Tagline */}
@@ -81,7 +81,7 @@ export default function Image() {
               letterSpacing: '-0.5px',
             }}
           >
-            Your finances. Your device. Your rules.
+            Money on your mind. Not on our servers.
           </div>
 
           {/* Privacy pill */}
@@ -90,14 +90,14 @@ export default function Image() {
               display: 'flex',
               alignItems: 'center',
               marginTop: '12px',
-              background: 'rgba(59,130,246,0.1)',
-              border: '1px solid rgba(59,130,246,0.25)',
+              background: 'rgba(17,166,117,0.12)',
+              border: '1px solid rgba(17,166,117,0.30)',
               borderRadius: '100px',
               padding: '10px 28px',
             }}
           >
-            <div style={{ fontSize: 20, color: '#93C5FD' }}>
-              Privacy-first personal finance
+            <div style={{ fontSize: 20, color: '#6FE9B6' }}>
+              100% on your phone. 0% on our servers.
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function Image() {
             letterSpacing: '0.5px',
           }}
         >
-          traccia.app
+          monietally.com
         </div>
       </div>
     ),

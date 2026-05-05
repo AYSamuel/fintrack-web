@@ -1,8 +1,8 @@
 export const SITE = {
-  name: "Traccia",
-  tagline: "Your finances. Beautifully traced.",
+  name: "MonieTally",
+  tagline: "Money on your mind. Not on our servers.",
   description:
-    "Privacy-first personal finance app. Track spending, see visual insights, all on your device.",
-  url: "https://traccia.app",
-  email: "hello@traccia.app",
+    "Track your spending without anyone tracking you. Every transaction stays on your phone, encrypted with bank-level security. Never uploaded. Never sold.",
+  url: "https://monietally.com",
+  email: "hello@monietally.com",
 };
