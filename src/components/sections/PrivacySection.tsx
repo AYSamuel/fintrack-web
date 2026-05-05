@@ -4,11 +4,11 @@ import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 const cards = [
   {
-    title: "No cloud sync",
-    detail: "Never stored on a server",
+    title: "Nothing leaves your phone",
+    detail: "Truly local-first",
     description:
-      "Everything stays local. Your financial data is never transmitted, backed up, or stored anywhere outside your device.",
-    accentColor: "#4E6FD9",
+      "Your financial data is never transmitted, never backed up, never stored anywhere outside your device. We physically cannot see it.",
+    accentColor: "#11A675",
     icon: (
       <svg
         width="22"
@@ -27,10 +27,10 @@ const cards = [
     ),
   },
   {
-    title: "No user accounts",
-    detail: "No signup, no profile",
+    title: "No accounts to hack",
+    detail: "Nothing to sign up for",
     description:
-      "No email required. No password to remember. No account to hack. Just open the app and go.",
+      "No email. No password. No profile. There is nothing for an attacker to breach because there is nothing on our end.",
     accentColor: "#00C98B",
     icon: (
       <svg
@@ -51,11 +51,11 @@ const cards = [
     ),
   },
   {
-    title: "AES-256 encrypted",
-    detail: "Same standard as banks",
+    title: "Bank-level encryption",
+    detail: "AES-256, on your device",
     description:
-      "Your data is encrypted on-device using AES-256, the same standard used by financial institutions worldwide.",
-    accentColor: "#6B5BC9",
+      "Your data is encrypted on your phone using AES-256, the same standard banks use to secure their own systems.",
+    accentColor: "#0A6E4D",
     icon: (
       <svg
         width="22"
@@ -83,12 +83,12 @@ export default function PrivacySection() {
       id="privacy"
       className="py-20 md:py-28 relative overflow-hidden"
     >
-      {/* Subtle background shift */}
+      {/* Subtle background shift, emerald wash */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 30% 50%, rgba(78,111,217,0.04) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 30% 50%, rgba(17,166,117,0.06) 0%, transparent 60%)",
         }}
       />
 
@@ -99,16 +99,16 @@ export default function PrivacySection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
-          <p className="section-label mb-3">Privacy first</p>
+          <p className="section-label mb-3">Privacy by architecture</p>
           <h2 className="section-heading mb-4">
-            Your data. Your device.{" "}
-            <span className="text-gradient">Period.</span>
+            Your money.{" "}
+            <span className="text-gradient">Your business.</span>
           </h2>
           <p
             className="text-base max-w-md mx-auto"
             style={{ color: "var(--text-secondary)" }}
           >
-            No accounts. No cloud storage. No tracking. No compromise.
+            No accounts. No cloud. No trackers. No compromises.
           </p>
         </div>
 

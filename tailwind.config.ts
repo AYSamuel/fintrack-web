@@ -6,19 +6,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // ── Primary Brand ──
+        // ── Primary Brand (variable names kept for compatibility, values now emerald) ──
         brand: {
-          blue: "#4E6FD9",
-          purple: "#6B5BC9",
-          "deep-blue": "#3D4FA8",
-          royal: "#4A5DC9",
+          blue: "#11A675",       // primary emerald
+          purple: "#0A6E4D",     // deep emerald
+          "deep-blue": "#084034", // deepest emerald
+          royal: "#0F8B68",
+          mint: "#5DDDA8",
+          gold: "#F4B860",       // warm gold accent
         },
-        // ── Accents ──
+        // ── Accents (kept for variety in feature cards) ──
         accent: {
           pink: "#E85D8A",
           orange: "#E67A3D",
           cyan: "#00B8D9",
           green: "#00C98B",
+          gold: "#F4B860",
         },
         // ── Semantic ──
         income: "#00C98B",
@@ -26,7 +29,7 @@ const config: Config = {
         success: "#00C98B",
         error: "#E84D4D",
         warning: "#E6A545",
-        info: "#4E6FD9",
+        info: "#11A675",
         "on-track": "#40C4FF",
         // ── Dark surfaces ──
         dark: {
@@ -88,17 +91,17 @@ const config: Config = {
         ],
       },
       backgroundImage: {
-        "gradient-hero": "linear-gradient(135deg, #2D3E85, #4A4A92)",
-        "gradient-hero-purple": "linear-gradient(135deg, #4A4A92, #8B6DB8)",
-        "gradient-cta": "linear-gradient(135deg, #2D3E85, #4A4A92)",
-        "gradient-card-blue": "linear-gradient(135deg, #4E6FD9, #6B5BC9)",
+        "gradient-hero": "linear-gradient(135deg, #084034, #0A6E4D)",
+        "gradient-hero-purple": "linear-gradient(135deg, #0A6E4D, #14B881)",
+        "gradient-cta": "linear-gradient(135deg, #084034, #0A6E4D)",
+        "gradient-card-blue": "linear-gradient(135deg, #14B881, #0A6E4D)",
         "gradient-card-pink": "linear-gradient(135deg, #E85D8A, #E87099)",
         "gradient-sunset": "linear-gradient(135deg, #BA4668, #BF5E33)",
-        "gradient-ocean": "linear-gradient(135deg, #008FA8, #3D4FA8)",
+        "gradient-ocean": "linear-gradient(135deg, #14B881, #0A6E4D)",
         "gradient-dark":
           "linear-gradient(180deg, #0A0B0D 0%, #12131A 100%)",
         "gradient-radial-blue":
-          "radial-gradient(ellipse at center, rgba(78,111,217,0.12) 0%, transparent 70%)",
+          "radial-gradient(ellipse at center, rgba(17,166,117,0.14) 0%, transparent 70%)",
       },
       borderRadius: {
         "2xl": "16px",

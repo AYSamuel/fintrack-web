@@ -1,4 +1,4 @@
-// Stricter than the browser's type="email" — rejects single-char TLDs,
+// Stricter than the browser's type="email", rejects single-char TLDs,
 // IP literals, quoted strings, and other technically-valid-but-never-real forms.
 const FORMAT_REGEX =
   /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}$/;
@@ -372,7 +372,7 @@ function isSuspiciousLocalPart(local: string): boolean {
 
 /**
  * Validates an email address on format, disposable domain, and suspicious patterns.
- * Safe to call from both client and server — no Node.js APIs used here.
+ * Safe to call from both client and server, no Node.js APIs used here.
  */
 export function validateEmail(raw: string): EmailValidationResult {
   const normalised = raw.trim().toLowerCase();

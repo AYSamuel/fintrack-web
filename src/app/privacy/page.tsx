@@ -3,27 +3,27 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Traccia",
+  title: "Privacy Policy | MonieTally",
   description:
-    "Traccia's privacy policy. Learn how we handle your data. The short answer: we mostly don't.",
+    "MonieTally's privacy policy. Learn how we handle your data. The short answer: we mostly don't.",
 };
 
 const sections = [
   {
     id: "introduction",
     title: "1. Introduction",
-    content: `Traccia ("we", "our", "the app") is a privacy-first personal finance application. This Privacy Policy explains how we handle information in connection with the Traccia app and this website (traccia.app).
+    content: `MonieTally ("we", "our", "the app") is a privacy-first personal finance application. This Privacy Policy explains how we handle information in connection with the MonieTally app and this website (monietally.com).
 
 Effective date: April 30, 2026.
 
-Our core principle: Traccia is built so that your financial data never leaves your device. The app does not collect, transmit, or store personal financial data on our servers. We never receive it.`,
+Our core principle: MonieTally is built so that your financial data never leaves your device. The app does not collect, transmit, or store personal financial data on our servers. We never receive it.`,
   },
   {
     id: "what-we-collect",
     title: "2. Information we collect",
-    content: `Website only: If you submit your email address via our waitlist form, we receive and store that email address to notify you when Traccia launches. Emails are stored securely in our Supabase PostgreSQL database. We do not share your address with third parties.
+    content: `Website only: If you submit your email address via our waitlist form, we receive and store that email address to notify you when MonieTally launches. Emails are stored securely in our Supabase PostgreSQL database. We do not share your address with third parties.
 
-The app: Traccia does not collect any personal data from app users. All financial data (transactions, balances, budgets, and analytics) is stored exclusively on your device, encrypted with AES-256. We have no access to it.`,
+The app: MonieTally does not collect any personal data from app users. All financial data (transactions, balances, budgets, and analytics) is stored exclusively on your device, encrypted with AES-256. We have no access to it.`,
   },
   {
     id: "how-we-use",
@@ -42,35 +42,35 @@ Waitlist emails: Stored securely in our Supabase PostgreSQL database, hosted in 
   {
     id: "third-party",
     title: "5. Third-party services",
-    content: `Traccia integrates with the following bank aggregation providers to sync transactions. Each provider has their own privacy policy:
+    content: `MonieTally integrates with the following bank aggregation providers to sync transactions. Each provider has their own privacy policy:
 
 • Plaid (North America): plaid.com/legal/privacy-statement
 • Tink (Europe): tink.com/privacy-policy
 • Mono (Africa): mono.co/legal/privacy-policy
 
-These providers operate under their respective terms. Traccia uses them only to fetch transaction data, which is then immediately stored on your device. We do not retain copies.`,
+These providers operate under their respective terms. MonieTally uses them only to fetch transaction data, which is then immediately stored on your device. We do not retain copies.`,
   },
   {
     id: "bank-sync",
     title: "6. Bank sync data flow",
     content: `When you connect a bank account, the following happens:
 
-1. You authenticate with your bank via the aggregator's secure flow (Plaid, Tink, or Mono). Your bank credentials are never seen or stored by Traccia.
+1. You authenticate with your bank via the aggregator's secure flow (Plaid, Tink, or Mono). Your bank credentials are never seen or stored by MonieTally.
 2. The aggregator returns an access token and your recent transactions to the app.
 3. The app stores this data locally on your device, encrypted and never transmitted.
 4. Subsequent syncs follow the same pattern: aggregator → app → on-device storage only.
 
-Traccia acts as a relay from aggregator to device. We do not sit in the middle, log transactions, or maintain a copy.`,
+MonieTally acts as a relay from aggregator to device. We do not sit in the middle, log transactions, or maintain a copy.`,
   },
   {
     id: "cookies",
     title: "7. Cookies",
-    content: `This website does not use cookies or any client-side tracking technology. We do not run analytics, ad tracking, or session recording on traccia.app.`,
+    content: `This website does not use cookies or any client-side tracking technology. We do not run analytics, ad tracking, or session recording on monietally.com.`,
   },
   {
     id: "childrens-privacy",
     title: "8. Children's privacy",
-    content: `Traccia is not directed at children under 13. We do not knowingly collect information from children. If you believe a child has submitted their email to our waitlist, please contact us and we will delete it promptly.`,
+    content: `MonieTally is not directed at children under 13. We do not knowingly collect information from children. If you believe a child has submitted their email to our waitlist, please contact us and we will delete it promptly.`,
   },
   {
     id: "changes",
@@ -80,7 +80,7 @@ Traccia acts as a relay from aggregator to device. We do not sit in the middle, 
   {
     id: "contact",
     title: "10. Contact",
-    content: `Questions about this policy? Email us at hello@traccia.app.`,
+    content: `Questions about this policy? Email us at hello@monietally.com.`,
   },
 ];
 

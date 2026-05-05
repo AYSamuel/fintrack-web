@@ -6,9 +6,9 @@ const features = [
   {
     title: "Auto-sync",
     description:
-      "Bank transactions flow in automatically via Plaid, Tink, or Mono. No manual entry needed.",
+      "Your bank's transactions flow in automatically through Plaid, Tink, or Mono. They flow out to nobody.",
     iconBg: "var(--feature-icon-blue)",
-    iconColor: "#4E6FD9",
+    iconColor: "#11A675",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="23 4 23 10 17 10" />
@@ -20,7 +20,7 @@ const features = [
   {
     title: "Visual insights",
     description:
-      "Beautiful charts and breakdowns that make your spending patterns crystal clear at a glance.",
+      "Charts that explain where your money went. Not why an advertiser should target you.",
     iconBg: "var(--feature-icon-green)",
     iconColor: "#00C98B",
     icon: (
@@ -32,11 +32,11 @@ const features = [
     ),
   },
   {
-    title: "Device-only storage",
+    title: "Stays on your phone",
     description:
-      "Your financial data never leaves your phone. Everything is encrypted with AES-256 on-device.",
+      "Your financial life lives on your device. Encrypted with AES-256. Offline. Yours alone.",
     iconBg: "var(--feature-icon-purple)",
-    iconColor: "#6B5BC9",
+    iconColor: "#0A6E4D",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
@@ -47,7 +47,7 @@ const features = [
   {
     title: "Smart budgets",
     description:
-      "Set budgets by category and track them in real time. Get notified before you overspend.",
+      "Set a limit per category. Get warned before you blow past it. No guilt, no shame, no nudges.",
     iconBg: "var(--feature-icon-pink)",
     iconColor: "#E85D8A",
     icon: (
@@ -58,9 +58,9 @@ const features = [
     ),
   },
   {
-    title: "Multi-region support",
+    title: "Works where you bank",
     description:
-      "Works across Europe, Africa, and North America. Connect to 12,000+ financial institutions.",
+      "Connect 12,000+ banks across Europe, Africa, and North America. Wherever your money is, MonieTally meets it.",
     iconBg: "var(--feature-icon-orange)",
     iconColor: "#E67A3D",
     icon: (
@@ -72,9 +72,9 @@ const features = [
     ),
   },
   {
-    title: "Biometric security",
+    title: "Locked like your phone",
     description:
-      "Face ID, fingerprint, and PIN protection. Your finances are locked behind the same security as your phone.",
+      "Face ID, fingerprint, or PIN. Whatever locks the rest of your life, locks your money too.",
     iconBg: "var(--feature-icon-cyan)",
     iconColor: "#00B8D9",
     icon: (
@@ -97,10 +97,10 @@ export default function Features() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
-          <p className="section-label mb-3">What Traccia does</p>
+          <p className="section-label mb-3">What&apos;s inside</p>
           <h2 className="section-heading">
-            Everything you need to{" "}
-            <span className="text-gradient">understand your money</span>
+            Everything a finance app should do.{" "}
+            <span className="text-gradient">Without doing the rest.</span>
           </h2>
         </div>
 

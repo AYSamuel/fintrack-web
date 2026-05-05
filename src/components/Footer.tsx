@@ -22,12 +22,13 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="text-lg font-semibold tracking-tight" style={{ color: "var(--text-primary)" }}>
-                Traccia
+                MonieTally
               </span>
             </div>
             <p className="text-sm max-w-xs leading-relaxed" style={{ color: "var(--text-tertiary)" }}>
-              Every transaction leaves a trace. Traccia captures them all and
-              turns your spending into clear, visual stories.
+              A finance app that forgets you the moment you close it. Your
+              money lives on your phone. Not in our database. Not in an ad
+              algorithm. Not for sale.
             </p>
           </div>
 
@@ -85,10 +86,10 @@ export default function Footer() {
           style={{ borderColor: "var(--border-subtle)" }}
         >
           <p className="text-xs" style={{ color: "var(--text-tertiary)" }}>
-            &copy; {currentYear} Traccia. All rights reserved.
+            &copy; {currentYear} MonieTally. All rights reserved.
           </p>
           <p className="text-xs" style={{ color: "var(--text-tertiary)" }}>
-            Made with care. Your data stays yours.
+            Built for people who&apos;d rather not be the product.
           </p>
         </div>
       </div>

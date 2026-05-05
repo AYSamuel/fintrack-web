@@ -34,7 +34,7 @@ export default function WaitlistForm({ source = "hero" }: WaitlistFormProps) {
     e.preventDefault();
     if (status === "loading") return;
 
-    // Client-side gate — same logic as the server, instant feedback
+    // Client-side gate, same logic as the server, instant feedback
     const clientResult = validateEmail(email);
     if (!clientResult.valid) {
       setInlineError(EMAIL_ERROR_MESSAGES[clientResult.reason]);

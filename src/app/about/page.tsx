@@ -4,17 +4,17 @@ import Footer from "../../components/Footer";
 import WaitlistCTA from "../../components/sections/WaitlistCTA";
 
 export const metadata: Metadata = {
-  title: "About | Traccia",
+  title: "About | MonieTally",
   description:
-    "Why Traccia exists. Our mission, philosophy, and principles around privacy-first personal finance.",
+    "Why we built a finance app that doesn't want your data. Our mission, principles, and the architecture behind privacy-first personal finance.",
 };
 
 const principles = [
   {
-    title: "Privacy by design",
+    title: "Privacy by architecture",
     description:
-      "Privacy isn't a feature we added. It's the foundation everything is built on. Every architectural decision starts with: does this keep data on the device?",
-    color: "#4E6FD9",
+      "We did not bolt privacy on. The whole architecture starts with one question: does this keep data on the device? If the answer is no, we don't build it.",
+    color: "#11A675",
     icon: (
       <svg
         width="20"
@@ -33,7 +33,7 @@ const principles = [
   {
     title: "Local-first",
     description:
-      "Your device, your data, your rules. Traccia works fully offline. No internet required to view your finances. Your finances live on your phone, not our servers.",
+      "Your phone, your data, your call. MonieTally runs fully offline. The internet exists only to fetch transactions from your bank. Then it gets out of the way.",
     color: "#00C98B",
     icon: (
       <svg
@@ -54,8 +54,8 @@ const principles = [
   {
     title: "Beautiful clarity",
     description:
-      "Complex financial data deserves better than a spreadsheet. Traccia turns transactions into visual stories: charts and insights that actually make sense.",
-    color: "#6B5BC9",
+      "Numbers belong in a story, not a spreadsheet. MonieTally turns your transactions into charts and insights you'll actually want to look at.",
+    color: "#0A6E4D",
     icon: (
       <svg
         width="20"
@@ -74,10 +74,10 @@ const principles = [
     ),
   },
   {
-    title: "Global reach",
+    title: "Works where you bank",
     description:
-      "Finance is universal. Traccia connects to banks across Europe, Africa, and North America. Wherever you are, your money works with Traccia.",
-    color: "#E67A3D",
+      "Finance is universal. Banking is not. MonieTally connects across Europe, Africa, and North America so your money works wherever you do.",
+    color: "#F4B860",
     icon: (
       <svg
         width="20"
@@ -108,21 +108,20 @@ export default function AboutPage() {
             className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
             style={{
               background:
-                "radial-gradient(ellipse at center, rgba(78,111,217,0.08) 0%, transparent 70%)",
+                "radial-gradient(ellipse at center, rgba(17,166,117,0.10) 0%, transparent 70%)",
             }}
           />
           <div className="section-container relative text-center max-w-3xl mx-auto">
-            <p className="section-label mb-4">Our mission</p>
+            <p className="section-label mb-4">Why we exist</p>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
-              Why{" "}
-              <span className="text-gradient">Traccia</span>{" "}
-              exists
+              Why we don&apos;t want{" "}
+              <span className="text-gradient">your data.</span>
             </h1>
             <p
               className="text-base md:text-lg leading-relaxed"
               style={{ color: "var(--text-secondary)" }}
             >
-              Because your financial life is deeply personal. It has no business living on someone else&apos;s server.
+              Most finance apps treat your transactions as a product to sell. We chose differently.
             </p>
           </div>
         </section>
@@ -135,13 +134,13 @@ export default function AboutPage() {
               style={{ color: "var(--text-secondary)" }}
             >
               <p>
-                Most finance apps work against you. They harvest your transaction data, profile your spending habits, and sell that insight to advertisers. To use them, you hand over your most sensitive personal information and hope for the best.
+                Most finance apps are working against you. They harvest your transaction data, profile your spending habits, and sell those insights to advertisers and lenders. The price of using them is your dignity.
               </p>
               <p>
-                We built Traccia on a different belief: your financial data is yours alone. It should never leave your device, never be analyzed by a third party, and never be used to target you with ads.
+                We started MonieTally with one rule: your money is yours to count, not ours to collect. So we built an app that physically cannot see your data, because there is nowhere for it to go. No servers. No accounts. No cloud.
               </p>
               <p>
-                Traccia captures every financial trace locally, encrypts it on your device with AES-256, and gives you the visual clarity you need to understand your money. No accounts. No cloud storage. No tracking.
+                MonieTally counts your transactions on your phone, encrypts them on your phone, and shows you the picture on your phone. We never see a single dollar. We don&apos;t want to.
               </p>
             </div>
           </div>
@@ -153,7 +152,8 @@ export default function AboutPage() {
             <div className="text-center mb-12">
               <p className="section-label mb-3">How we build</p>
               <h2 className="section-heading">
-                Our <span className="text-gradient">principles</span>
+                Four rules.{" "}
+                <span className="text-gradient">No exceptions.</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
@@ -197,13 +197,14 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto text-center">
               <p className="section-label mb-3">What&apos;s next</p>
               <h2 className="section-heading mb-6">
-                Looking <span className="text-gradient">ahead</span>
+                More banks.{" "}
+                <span className="text-gradient">Same rules.</span>
               </h2>
               <p
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: "var(--text-secondary)" }}
               >
-                We&apos;re working on expanding to more regions, deepening our bank integrations, and building community features, all within the same privacy-preserving architecture. More banks. More insights. Zero compromises.
+                We&apos;re expanding to more regions, deepening bank integrations, and building optional community features. All within the same privacy-first architecture. More banks. More insight. Zero compromise on whose data this is.
               </p>
             </div>
           </div>

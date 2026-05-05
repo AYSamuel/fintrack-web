@@ -6,7 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 /* ══════════════════════════════════════════════
-   TRACCIA DESIGN SYSTEM — CSS Custom Properties
+   MONIETALLY DESIGN SYSTEM, CSS Custom Properties
+   Brand: emerald-forward, money-coded, calm.
    ══════════════════════════════════════════════ */
 
 @layer base {
@@ -28,10 +29,12 @@
     --border-subtle: #E8E9EE;
     --divider: #E8E9EE;
 
-    /* ── Brand ── */
-    --brand-blue: #4E6FD9;
-    --brand-purple: #6B5BC9;
-    --brand-deep-blue: #3D4FA8;
+    /* ── Brand (variable names kept; values now emerald-forward) ── */
+    --brand-blue: #11A675;       /* primary emerald */
+    --brand-purple: #0A6E4D;     /* deep emerald */
+    --brand-deep-blue: #084034;  /* deepest emerald */
+    --brand-mint: #5DDDA8;        /* light mint accent */
+    --brand-gold: #F4B860;        /* warm gold accent for highlights */
 
     /* ── Accents ── */
     --accent-pink: #E85D8A;
@@ -43,20 +46,30 @@
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
-    --shadow-glow-blue: 0 0 40px rgba(78, 111, 217, 0.15);
-    --shadow-glow-purple: 0 0 40px rgba(107, 91, 201, 0.15);
+    --shadow-glow-blue: 0 0 40px rgba(17, 166, 117, 0.18);
+    --shadow-glow-purple: 0 0 40px rgba(10, 110, 77, 0.18);
 
     /* ── Nav ── */
     --nav-bg: rgba(255, 255, 255, 0.85);
     --nav-border: #E8E9EE;
 
     /* ── Feature card icon bg ── */
-    --feature-icon-blue: rgba(78, 111, 217, 0.1);
+    --feature-icon-blue: rgba(17, 166, 117, 0.1);
     --feature-icon-green: rgba(0, 201, 139, 0.1);
-    --feature-icon-purple: rgba(107, 91, 201, 0.1);
+    --feature-icon-purple: rgba(10, 110, 77, 0.1);
     --feature-icon-pink: rgba(232, 93, 138, 0.1);
     --feature-icon-orange: rgba(230, 122, 61, 0.1);
     --feature-icon-cyan: rgba(0, 184, 217, 0.1);
+
+    /* ── Phone mockup ──
+       Light theme: silver/white iPhone finish + bright screen.
+       Screen tinted with emerald to match brand. */
+    --mockup-screen: linear-gradient(180deg, rgba(17, 166, 117, 0.06) 0%, #FFFFFF 100%);
+    --mockup-shell: linear-gradient(160deg, #E8E9EE 0%, #D1D2D9 50%, #B8B9C2 100%);
+    --mockup-bezel: #FFFFFF;
+    --mockup-island: #1A1B1E;
+    --mockup-shell-shadow: 0 22px 48px -22px rgba(17, 166, 117, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.04);
+    --mockup-shell-shadow-featured: 0 32px 64px -22px rgba(17, 166, 117, 0.45), 0 18px 40px -18px rgba(17, 166, 117, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.04);
   }
 
   .dark {
@@ -81,20 +94,29 @@
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
-    --shadow-glow-blue: 0 0 60px rgba(78, 111, 217, 0.2);
-    --shadow-glow-purple: 0 0 60px rgba(107, 91, 201, 0.2);
+    --shadow-glow-blue: 0 0 60px rgba(17, 166, 117, 0.22);
+    --shadow-glow-purple: 0 0 60px rgba(10, 110, 77, 0.22);
 
     /* ── Nav ── */
     --nav-bg: rgba(10, 11, 13, 0.85);
     --nav-border: #23242B;
 
     /* ── Feature card icon bg ── */
-    --feature-icon-blue: rgba(78, 111, 217, 0.15);
+    --feature-icon-blue: rgba(17, 166, 117, 0.15);
     --feature-icon-green: rgba(0, 201, 139, 0.15);
-    --feature-icon-purple: rgba(107, 91, 201, 0.15);
+    --feature-icon-purple: rgba(10, 110, 77, 0.15);
     --feature-icon-pink: rgba(232, 93, 138, 0.15);
     --feature-icon-orange: rgba(230, 122, 61, 0.15);
     --feature-icon-cyan: rgba(0, 184, 217, 0.15);
+
+    /* ── Phone mockup ──
+       Dark theme: black iPhone finish + dark screen. Halo tinted emerald. */
+    --mockup-screen: linear-gradient(180deg, #0A0B0D 0%, #122019 100%);
+    --mockup-shell: linear-gradient(160deg, #2A2B33 0%, #16171D 50%, #0E0F14 100%);
+    --mockup-bezel: #000000;
+    --mockup-island: #000000;
+    --mockup-shell-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    --mockup-shell-shadow-featured: 0 30px 60px -22px rgba(0, 0, 0, 0.55), 0 18px 40px -16px rgba(17, 166, 117, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
   }
 
   html {
@@ -110,11 +132,11 @@
   }
 
   ::selection {
-    background-color: rgba(78, 111, 217, 0.3);
+    background-color: rgba(17, 166, 117, 0.3);
     color: var(--text-primary);
   }
 
-  /* Keyboard focus — visible ring on all interactive elements */
+  /* Keyboard focus, visible ring on all interactive elements */
   a:focus-visible,
   button:focus-visible {
     outline: 2px solid var(--brand-blue);
@@ -128,15 +150,20 @@
    ══════════════════════════════════════════════ */
 
 @layer components {
-  /* Gradient text */
+  /* Gradient text, emerald-forward */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #4E6FD9, #6B5BC9);
+    background-image: linear-gradient(135deg, #14B881, #0A6E4D);
   }
 
   .text-gradient-green {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #00C98B, #00B8D9);
+    background-image: linear-gradient(135deg, #14B881, #0A6E4D);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #F4B860, #D89A3F);
   }
 
   /* Glass effect */
@@ -177,15 +204,15 @@
     color: var(--text-primary);
   }
 
-  /* CTA button */
+  /* CTA button, emerald gradient */
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-medium text-white transition-all duration-200;
-    background: linear-gradient(135deg, #4E6FD9, #6B5BC9);
-    box-shadow: 0 2px 12px rgba(78, 111, 217, 0.3);
+    background: linear-gradient(135deg, #14B881, #0A6E4D);
+    box-shadow: 0 2px 12px rgba(17, 166, 117, 0.35);
   }
   .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 20px rgba(78, 111, 217, 0.4);
+    box-shadow: 0 4px 20px rgba(17, 166, 117, 0.45);
   }
   .btn-primary:active {
     transform: translateY(0);
